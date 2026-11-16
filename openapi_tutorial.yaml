@@ -156,7 +156,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code/combinational/popularalgorithms/adder/adder_n10_vq.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitoAdder.py'
       x-quantumProvider: 'ibm'
 
   /circuit/miCircuitGrover:
@@ -190,7 +190,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code/combinational/popularalgorithms/grover/grover-noancilla_3_mqt.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitGrover.py'
       x-quantumProvider: 'ibm'
 
   /circuit/miCircuitoPermutation:
@@ -224,7 +224,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code/combinational/popularalgorithms/phase_estimation/pe_4_mqt.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitoPermutation.py'
       x-quantumProvider: 'ibm'
   
   /circuit/ShorIBMqiskit:
