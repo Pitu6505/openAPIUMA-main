@@ -159,7 +159,41 @@ paths:
       x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code//combinational/popularalgorithms/adder/adder_n10_vq.py'
       x-quantumProvider: 'ibm'
 
-    /circuit/miCircuitGrover:
+  /circuit/miCircuitoAdder:
+    get:
+      tags:
+        - quantum_code
+      summary: Circuito Adder
+      description: ''
+      operationId: miCircuitoAdder
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code/combinational/popularalgorithms/adder/adder_n10_vq.py'
+      x-quantumProvider: 'ibm'
+
+  /circuit/miCircuitGrover:
     get:
       tags:
         - quantum_code
@@ -190,10 +224,10 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code//combinational/popularalgorithms/grover/grover-noancilla_3_mqt.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code/combinational/popularalgorithms/grover/grover-noancilla_3_mqt.py'
       x-quantumProvider: 'ibm'
 
-    /circuit/miCircuitoPermutation:
+  /circuit/miCircuitoPermutation:
     get:
       tags:
         - quantum_code
@@ -224,7 +258,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code//combinational/popularalgorithms/phase_estimation/pe_4_mqt.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Qcraft-UEx/QCRAFT-Scheduler/main/circuits-code/combinational/popularalgorithms/phase_estimation/pe_4_mqt.py'
       x-quantumProvider: 'ibm'
   
   /circuit/ShorIBMqiskit:
