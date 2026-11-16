@@ -226,6 +226,43 @@ paths:
           description: Invalid execution
       x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitoPermutation.py'
       x-quantumProvider: 'ibm'
+
+  /circuit/miCircuitRandom:
+    get:
+      tags:
+        - quantum_code
+      summary: Circuito aleatorio creado en Quirk
+      description: ''
+      operationId: miCircuitRandom
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      externalDocs:
+        description: Circuito original en Quirk
+        url: 'https://algassert.com/quirk#circuit={"cols":[["H","H"],["H"],["X",1,"Z"],["Measure"],[1,"Measure"],[1,1,"Measure"]]}'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitRandom.py'
+      x-quantumProvider: 'ibm'
   
   /circuit/ShorIBMqiskit:
     get:
