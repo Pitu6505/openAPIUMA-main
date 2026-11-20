@@ -156,7 +156,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitoAdder.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/main/circuits/miCircuitoAdder.py'
       x-quantumProvider: 'ibm'
 
   /circuit/miCircuitGrover:
@@ -190,7 +190,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitGrover.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/main/circuits/miCircuitGrover.py'
       x-quantumProvider: 'ibm'
 
   /circuit/miCircuitoPermutation:
@@ -224,7 +224,7 @@ paths:
           description: successful operation
         '405':
           description: Invalid execution
-      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitoPermutation.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/main/circuits/miCircuitoPermutation.py'
       x-quantumProvider: 'ibm'
 
   /circuit/miCircuitRandom:
@@ -261,7 +261,7 @@ paths:
       externalDocs:
         description: Circuito original en Quirk
         url: 'https://algassert.com/quirk#circuit={"cols":[["H","H"],["H"],["X",1,"Z"],["Measure"],[1,"Measure"],[1,1,"Measure"]]}'
-      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/refs/heads/main/circuits/miCircuitRandom.py'
+      x-quantumCode: 'https://raw.githubusercontent.com/Pitu6505/openAPIUMA-main/main/circuits/miCircuitRandom.py'
       x-quantumProvider: 'ibm'
   
   /circuit/ShorIBMqiskit:
@@ -297,6 +297,108 @@ paths:
           description: Invalid execution
       x-quantumCode: 'https://bitbucket.org/spilab/quantum-circuits-code/raw/ceae6c374df01a918844b8d607bd8b6446888c8d/Popular/Shor_algorithm.py'
       x-quantumProvider: 'ibm'
+
+  /circuit/miCircuito1AWS:
+    get:
+      tags:
+        - quantum_code
+      summary: Primer circuito nuevo en AWS
+      description: ''
+      operationId: miCircuito1AWS
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk#circuit={"cols":[["H"],["•","X"],["Measure","Measure"]]}'
+      x-quantumProvider: 'aws'
+
+  /circuit/miCircuito2AWS:
+    get:
+      tags:
+        - quantum_code
+      summary: Segundo circuito nuevo en AWS
+      description: ''
+      operationId: miCircuito2AWS
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk#circuit={"cols":[["H","H"],[1,"X"],[1,"H"],["•","X"],[1,"H"],[1,"X"],[1,"H"],["Measure","Measure"]]}'
+      x-quantumProvider: 'aws'
+
+  /circuit/miCircuito3AWS:
+    get:
+      tags:
+        - quantum_code
+      summary: Tercer circuito nuevo en AWS
+      description: ''
+      operationId: miCircuito3AWS
+      parameters:
+        - name: machine
+          in: query
+          description: quantum machine
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: string
+        - name: shots
+          in: query
+          description: Number of shots
+          required: true
+          style: form
+          explode: false
+          deprecated: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '405':
+          description: Invalid execution
+      x-quantumCode: 'https://algassert.com/quirk#circuit={"cols":[["H","H","H"],["•",1,1,"X"],[1,"•",1,"X"],[1,1,"•","X"],["H","H","H"],["Measure","Measure","Measure"]]}'
+      x-quantumProvider: 'aws'
       
   /circuit/CircuitIBMqiskitParameterized:
     post:
